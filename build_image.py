@@ -236,7 +236,7 @@ def Stage1(CacheDir, RootFSDir, config_json):
         '32G',
         '-smp',
         NumCores,
-        '-enable-kvm',
+        # '-enable-kvm',
         '-nographic',
         '-nic',
         'user,model=virtio-net-pci',
