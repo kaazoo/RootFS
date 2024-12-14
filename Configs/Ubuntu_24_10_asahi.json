@@ -209,6 +209,7 @@
 	],
 	"Commands_InChroot2": [
 		"add-apt-repository -y ppa:kaazoo/ubuntu-asahi-gaming",
+		"apt install -y libxshmfence1:amd64 libxshmfence1:i386",
 		"apt install -y libgl1:i386 libegl-mesa0:i386 libgbm1:i386 libgl1-mesa-dri:i386 libglapi-mesa:i386 libglx-mesa0:i386 libosmesa6:i386 mesa-libgallium:i386 mesa-va-drivers:i386 mesa-vdpau-drivers:i386",
 		"apt install -y libegl-mesa0 libgbm1 libgl1-mesa-dri libglapi-mesa libglx-mesa0 libosmesa6 mesa-drm-shim mesa-libgallium mesa-opencl-icd mesa-va-drivers mesa-vdpau-drivers mesa-vulkan-drivers",
 		"apt install -y mesa-utils vulkan-tools",
@@ -222,8 +223,7 @@
 		"rm -Rf /root/.*",
 		"find /sbin/ /bin/ /usr/bin/ -perm /4000 -delete",
 		"find /sbin/ /bin/ /usr/bin/ -perm /2000 -delete",
-    	"chmod +rwx /etc/credstore*",
-		"echo \"nameserver 1.1.1.1\" > /etc/resolv.conf"
+    	"chmod +rwx /etc/credstore*"
 	],
 
 	"Commands_Stage2_CMT": [
