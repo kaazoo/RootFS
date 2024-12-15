@@ -208,11 +208,13 @@
 		"Executes commands inside the rootfs immediately following package installation"
 	],
 	"Commands_InChroot2": [
-		"add-apt-repository -y ppa:kaazoo/ubuntu-asahi-gaming",
-		"apt install -y libxshmfence1:amd64 libxshmfence1:i386",
+		"add-apt-repository -y ppa:ubuntu-asahi/ubuntu-asahi",
 		"apt install -y libgl1:i386 libegl-mesa0:i386 libgbm1:i386 libgl1-mesa-dri:i386 libglapi-mesa:i386 libglx-mesa0:i386 libosmesa6:i386 mesa-libgallium:i386 mesa-va-drivers:i386 mesa-vdpau-drivers:i386",
 		"apt install -y libegl-mesa0 libgbm1 libgl1-mesa-dri libglapi-mesa libglx-mesa0 libosmesa6 mesa-drm-shim mesa-libgallium mesa-opencl-icd mesa-va-drivers mesa-vdpau-drivers mesa-vulkan-drivers",
+		"rm -f /usr/share/vulkan/icd.d/virtio_icd.*",
 		"apt install -y mesa-utils vulkan-tools",
+		"add-apt-repository -y ppa:kaazoo/ubuntu-asahi-gaming",
+		"apt install -y libxshmfence1:amd64 libxshmfence1:i386",
 		"apt-get purge -y --allow-remove-essential bsdutils",
 		"apt-get purge -y fuse3",
 		"SUDO_FORCE_REMOVE=yes apt-get remove -y sudo",
